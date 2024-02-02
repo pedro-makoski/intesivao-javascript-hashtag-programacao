@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Aplicativo Audiobook básico</title>
+</head>
+<body>
+    <div class="container-aplicativo">
+        <img src="./images/dom-casmurro.jpeg" alt="Imagem da capa do livro de Dom casmurro, onde duas pessoas estão se beijando">
+        <div id="informacoes-faixa">
+            <h1 id="capitulo">Capitulo 1</h1>
+            <p id="autor">Dom Casmurro</p>
+        </div>
+        <audio id="audio" preload="metadata">
+            <source src="./books/dom-casmurro/mp3/1.mp3" type="audio/mpeg" id="audio-mp3">
+            <source src="./books/dom-casmurro/ogg/1.ogg" id="audio-ogg">
+        </audio>
+        <div id="container-botoes">
+            <button id="anterior" class="bi bi-skip-backward-circle-fill"></button>
+            <button id="play-pause" class="bi bi-play-circle-fill"></button>
+            <button id="proximo" class="bi bi-skip-forward-circle-fill"></button>
+        </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

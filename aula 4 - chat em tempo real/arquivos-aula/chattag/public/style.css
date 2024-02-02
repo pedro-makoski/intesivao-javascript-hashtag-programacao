@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Trench';
+  font-weight: 400;
+  src: url('./assets/trench100free.otf');
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  font-family: 'Trench';
+  background-color: #8ACB88;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  & > img {
+    max-height: 3rem;
+    margin-right: 0.2rem;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  flex-grow: 1;
+}
+
+#mensagens {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 60%;
+  background-color: #eaeaea;
+  flex-grow: 1;
+  width: 100%;
+  font-size: 0.9rem;
+  overflow: auto;
+
+}
+
+
+.direita {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.mensagem-direita{
+  background-color: #8ACB88;
+  color: black;
+  width: 50%;
+  margin: 0.1rem 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.esquerda {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.mensagem-esquerda{
+  background-color: #EEBA0B;
+  color: black;
+  width: 50%;
+  margin: 0.1rem 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+#envio-mensagens {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 40%;
+  max-height: 3rem;
+  & > input {
+    flex-grow: 1;
+    padding: 0.5rem 0.3rem;
+    border-radius: 50px;
+  }
+  & > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #334c32;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 50px;
+    margin-left: 0.5rem;
+    transition: .3s;
+    &:hover {
+      background-color: #8ACB88;
+      transition: .3s;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    width: 90%;
+  }
+}

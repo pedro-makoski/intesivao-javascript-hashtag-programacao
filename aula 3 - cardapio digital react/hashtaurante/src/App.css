@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'San Francisco';
+  font-weight: 400;
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff');
+}
+
+body{
+  background-color: wheat;
+}
+
+#root {
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'San Francisco';
+}
+
+h1{
+  color:brown;
+  font-size:10vw;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin: 10px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.navegacao {
+  display: flex;
+  gap: 0.1rem;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.botao-navegacao {
+  width: 30%;
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  border-radius: 10px;
+  padding: 0.3rem 0;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input{
+  display: none;
+}
+
+input[name="opcao"]:checked + label{
+  background-color:brown;
+}
+
+.container-item-cardapio {
+  display: flex;
+  width: 30rem;
+  padding: 1rem;
+  gap: 2px;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  background-color: brown;
+  color: white;
+  & > h2 {
+    font-weight: 600;
+  }
+}
+
+.imagem-item-cardapio {
+  height: 11rem;
+  border-radius: 10px;
+}
+
+.informacoes-item-cardapio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-basis: 60%;
+  flex-grow: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.capa {
+  max-height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1150px) {
+  .container-item-cardapio{
+    width: 90vw;
+    gap: 10px;
+  }
+
+  #root{
+    padding: 2px;
+  }
+}
